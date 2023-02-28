@@ -220,20 +220,34 @@
         <h3 class="section-title">MESSAGE USER</h3>
         <form class="widget-container">
         <input type="text" placeholder="Search for user"
-        class="form-field" id="userField">
+        class="form-field" id="userField"><br><br>
         <textarea placeholder="Message for user" class="form-area"
-        id= "messageField" ></textarea>
-        <button class="button-primary" id="send" >Send</button>
+        id= "messageField" ></textarea><br><br>
+        <button class="button-primary" id="send" >Send</button><br><br>
         </form> 
       </section>
 
-      <section class="settings"> <h3>Settings</h3>
-        <!-- custom CSS toggle code-->
-        <!-- custom CSS toggle code-->
+      <section class="settings"> 
+        <h3>SETTINGS</h3>
+        <br>
+        <br>
+        <div class="toggle-container">
+          <p>Send Email Notifications</p>
+          <input type="checkbox" id="toggle">
+        </div>
+        <br><br>
+        <div class="toggle-container">
+          <p>Send Profile to Public</p>
+          <input type="checkbox" id="toggle">
+        </div>
+        <br>
+        <br>
     <select class="form-field" id="timezone">
     <option disabled selected>Select a Timezone</option> <option>Eastern</option>
     <!-- more options -->
     </select>
+    <br>
+    <br>
     <div class="settings-button" >
     <button class="button-primary" id="save">Save</button>
     <button class="button-disabled" id="cancel">Cancel</button> </div>
