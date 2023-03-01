@@ -70,6 +70,19 @@ h1,
     display: flex;
     margin-left: .75rem;
 }
+.notification-dot {
+    background-color: #90ee90;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 10px;
+    right: 4px;    
+}
+.bell-svg:hover {
+    fill: #4d4c72;
+    transition: .3s;
+}
 .flex {
     display: flex;
 }
@@ -107,10 +120,10 @@ nav {
 .main-header {
     display: flex;
 }
-.alert {
+.alert-banner {
     justify-content: space-between;
     background-color: #7477bf;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     border-radius: 1rem;
     color: white;
@@ -212,8 +225,8 @@ nav {
     border: solid lightgray 1px;
     border-radius: .5rem;
     font-size: 1.2rem;
-    color: lightgray;
     padding-left: 1rem; 
+    color: black;
 }
 #messageField {
     width: 100%;
@@ -305,6 +318,12 @@ nav {
     }
     #cancel {
         background-color: gray;
+    }
+    .text-left {
+        text-align: left;
+    }
+    .alert-banner-close {
+        cursor: pointer;
     }
 @media (min-width: 768px) {
     .grid-container {
