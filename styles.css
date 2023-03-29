@@ -410,4 +410,7 @@ nav {
     .toggle-container {
         width: 55%;
     }
+    .social-icon, .social-text {
+        margin-left: 1rem;
+    }
 }
