@@ -252,6 +252,12 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 2.5rem;
+        
+    }
+    .settings-button {
+        padding-top: 1rem;
     }
     #toggle {
         -webkit-appearance: none;
