@@ -444,7 +444,7 @@ nav {
         }
     .members {
         grid-area: members;
-        /* width: 50%; */
+        width: 100%;
         border-top: 1px solid lightgray;
         border-right: 1px solid lightgray;
         margin-left: 0;
@@ -455,7 +455,7 @@ nav {
         border-top: 1px solid lightgray;
         padding-left: 1rem;
         
-        /* width: 50%; */
+        width: 100%;
     }
     .members-grid {
         display: grid;
@@ -485,27 +485,60 @@ nav {
         grid-area: message;
         padding-right: 1rem;
         border-right: 1px solid lightgray;
+        width: 100%;
     }
     .settings {
         grid-area: settings;
         padding-left: 1rem;
+        width: 100%;
     }
     .message-settings-container {
-        display: grid;
+        grid-area: message-settings-container;
+        /* display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-        "message settings "
+        "message settings" */
         ;
     }
     .toggle-container {
         padding-top: 2rem;
         padding-bottom: 1rem;
+        width: 55%;
     }
     #timezone {
         margin-top: .7rem;
     }
     .settings-button {
+        padding-top: 0;
         margin-top: .28rem;
     }
+    .members-grid-1 {
+        grid-area: members-grid-1;
+    }
+    .members-grid-2 {
+        grid-area: members-grid-2;
+    }
+    .members-grid-3 {
+        grid-area: members-grid-3;
+    }
+    .members-grid-4 {
+        grid-area: members-grid-4;
+    }
+    .four-section-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "members-grid-1 members-grid-2"
+        "members-grid-3 members-grid-4";
+        padding-top: 2rem;
+    }
+    .section-title {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+  
 }
 }
