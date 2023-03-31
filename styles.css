@@ -420,6 +420,9 @@ nav {
         margin-left: 1rem;
     }
     @media (min-width: 1024px) {
+        .email {
+            font-size: 14px;
+        }
         .daily-mobile {
             margin-top: 2rem;
         }
@@ -503,7 +506,7 @@ nav {
     .toggle-container {
         padding-top: 2rem;
         padding-bottom: 1rem;
-        width: 55%;
+        width: 85%;
     }
     #timezone {
         margin-top: .7rem;
@@ -527,7 +530,7 @@ nav {
     .four-section-grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: .75fr .75fr;
         grid-template-areas: 
         "members-grid-1 members-grid-2"
         "members-grid-3 members-grid-4";
