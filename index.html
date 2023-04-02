@@ -79,9 +79,10 @@
         <div class="traffic-header">
         <h3 class="graph-title" id="traffic">TRAFFIC</h3>
         <ul class="traffic-nav">
-        <li class="traffic-nav-link">Hourly</li>
-        <li class="traffic-nav-link">Daily</li>
-        <li class="traffic-nav-link active">Weekly</li> <li class="traffic-nav-link">Monthly</li>
+        <li class="traffic-nav-link"><button onclick="hourly1()">Hourly</button></li>
+        <li class="traffic-nav-link"><button onclick="daily1()">Daily</button></li>
+        <li class="traffic-nav-link active"><button onclick="weekly1()">Weekly</button></li> 
+        <li class="traffic-nav-link"><button onclick="monthly1()">Monthly</button></li>
         </ul> 
       </div>
         <div class="widget-container-full">
@@ -351,13 +352,20 @@ messageSend.addEventListener('click', (e) => {
 
       <script>
 
-     
 
-        const trafficCanvas = document.getElementById('traffic-chart');
-        const dailyCanvas = document.getElementById("daily-chart");
-        const mobileCanvas = document.getElementById("mobile-chart");
 
-        let trafficData = {
+let hourly = {
+      labels: ["01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00",
+"08:00", "09:00", "10:00", "11:00"],
+    datasets: [{
+      data: [1250, 750, 2000, 1000, 2500, 1500, 1250, 1550, 2000, 1000,
+2500],
+      backgroundColor: 'rgba(116, 119, 191, .3)',
+      borderWidth: 1,
+    }]
+};
+
+let weekly = {
       labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
 "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
@@ -367,6 +375,33 @@ messageSend.addEventListener('click', (e) => {
       borderWidth: 1,
     }]
 };
+
+let daily = {
+      labels: ["M", "T", "W", "R", "F", "SA", "SU"],
+    datasets: [{
+      data: [1500, 2000, 1500, 700, 1000, 1750, 1750],
+      backgroundColor: 'rgba(116, 119, 191, .3)',
+      borderWidth: 1,
+    }]
+};
+
+let monthly = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    datasets: [{
+      data: [2500, 1500, 1500, 2000, 2500, 1050, 750, 1500, 2000, 2000,
+700, 100],
+      backgroundColor: 'rgba(116, 119, 191, .3)',
+      borderWidth: 1,
+    }]
+};
+
+        const trafficCanvas = document.getElementById('traffic-chart');
+        const dailyCanvas = document.getElementById("daily-chart");
+        const mobileCanvas = document.getElementById("mobile-chart");
+
+        
+        let trafficData = hourly;
+        
 
 let trafficOptions = {
    backgroundColor: 'rgba(112, 104, 201, .5)',
@@ -446,6 +481,24 @@ let mobileChart = new Chart(mobileCanvas, {
   data: mobileData,
   options: mobileOptions
 });
+
+function daily1() {
+  trafficChart.data = daily;
+  trafficChart.update();
+}
+function hourly1() {
+  trafficChart.data = hourly;
+  trafficChart.update();
+}
+function weekly1() {
+  trafficChart.data = weekly;
+  trafficChart.update();
+}
+function monthly1() {
+  trafficChart.data = monthly;
+  trafficChart.update();
+}
+
 
 
       </script>
