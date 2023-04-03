@@ -79,10 +79,10 @@
         <div class="traffic-header">
         <h3 class="graph-title" id="traffic">TRAFFIC</h3>
         <ul class="traffic-nav">
-        <li class="traffic-nav-link"><button onclick="hourly1()">Hourly</button></li>
-        <li class="traffic-nav-link"><button onclick="daily1()">Daily</button></li>
-        <li class="traffic-nav-link active"><button onclick="weekly1()">Weekly</button></li> 
-        <li class="traffic-nav-link"><button onclick="monthly1()">Monthly</button></li>
+        <li class="traffic-nav-link"><button class="non-selected-buttons" id="hourly-button" onclick="hourly1()">Hourly</button></li>
+        <li class="traffic-nav-link"><button class="non-selected-buttons" id="daily-button" onclick="daily1()">Daily</button></li>
+        <li class="traffic-nav-link active"><button class="non-selected-buttons" id="weekly-button" onclick="weekly1()">Weekly</button></li> 
+        <li class="traffic-nav-link"><button class="non-selected-buttons" id="monthly-button" onclick="monthly1()">Monthly</button></li>
         </ul> 
       </div>
         <div class="widget-container-full">
@@ -485,18 +485,62 @@ let mobileChart = new Chart(mobileCanvas, {
 function daily1() {
   trafficChart.data = daily;
   trafficChart.update();
+  let nonSelected = document.getElementsByClassName("non-selected-buttons");
+  for ( let i = 0; i < nonSelected.length; i++ ) {
+    nonSelected[i].style.backgroundColor = 'white';
+    nonSelected[i].style.color = 'black';
+  }
+  document.getElementById("daily-button").style.backgroundColor = "#81c98f"
+  document.getElementById("daily-button").style.borderRadius = "40px"
+  document.getElementById("daily-button").style.fontSize = "1.1rem"
+  document.getElementById("daily-button").style.padding = "1.1rem"
+  document.getElementById("daily-button").style.border = "none"
+  document.getElementById("daily-button").style.color = "white"
 }
 function hourly1() {
   trafficChart.data = hourly;
   trafficChart.update();
+  let nonSelected = document.getElementsByClassName("non-selected-buttons");
+  for ( let i = 0; i < nonSelected.length; i++ ) {
+    nonSelected[i].style.backgroundColor = 'white';
+    nonSelected[i].style.color = 'black';
+  }
+  document.getElementById("hourly-button").style.backgroundColor = "#81c98f"
+  document.getElementById("hourly-button").style.borderRadius = "40px"
+  document.getElementById("hourly-button").style.fontSize = "1.1rem"
+  document.getElementById("hourly-button").style.padding = "1.1rem"
+  document.getElementById("hourly-button").style.border = "none"
+  document.getElementById("hourly-button").style.color = "white"
 }
 function weekly1() {
   trafficChart.data = weekly;
   trafficChart.update();
+  let nonSelected = document.getElementsByClassName("non-selected-buttons");
+  for ( let i = 0; i < nonSelected.length; i++ ) {
+    nonSelected[i].style.backgroundColor = 'white';
+    nonSelected[i].style.color = 'black';
+  }
+  document.getElementById("weekly-button").style.backgroundColor = "#81c98f"
+  document.getElementById("weekly-button").style.borderRadius = "40px"
+  document.getElementById("weekly-button").style.fontSize = "1.1rem"
+  document.getElementById("weekly-button").style.padding = "1.1rem"
+  document.getElementById("weekly-button").style.border = "none"
+  document.getElementById("weekly-button").style.color = "white"
 }
 function monthly1() {
   trafficChart.data = monthly;
   trafficChart.update();
+  let nonSelected = document.getElementsByClassName("non-selected-buttons");
+  for ( let i = 0; i < nonSelected.length; i++ ) {
+    nonSelected[i].style.backgroundColor = 'white';
+    nonSelected[i].style.color = 'black';
+  }
+  document.getElementById("monthly-button").style.backgroundColor = "#81c98f"
+  document.getElementById("monthly-button").style.borderRadius = "40px"
+  document.getElementById("monthly-button").style.fontSize = "1.1rem"
+  document.getElementById("monthly-button").style.padding = "1.1rem"
+  document.getElementById("monthly-button").style.border = "none"
+  document.getElementById("monthly-button").style.color = "white"
 }
 
 

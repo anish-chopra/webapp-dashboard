@@ -161,10 +161,24 @@ nav {
 .traffic-nav-link {
     list-style-type: none;
 }
+#hourly-button {
+    background-color: #81c98f;
+    color: white;
+    padding: 1.1rem;
+    border-radius: 40px;
+    border: none;
+    font-size: 1.1rem;
+}
+#weekly-button, #daily-button, #monthly-button {
+    border: none;
+    background-color: white;
+    padding: 1.1rem;
+    font-size: 1.1rem;
+}
 .graph-title {
     font-weight: 500;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .social-container {
