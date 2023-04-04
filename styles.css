@@ -356,6 +356,17 @@ nav {
         padding-bottom: 2rem;
         border-bottom: 1px lightgray solid;
     }
+    .result-box {
+        position: absolute;
+        background-color: white;
+        width: 40%;
+    }
+    .result-box ul li{
+        list-style-type: none;
+        font-size: 1.3rem;
+        color: gray;
+        margin-bottom: 1rem;
+    }
 @media (min-width: 768px) {
     .grid-container {
       grid-template-columns: 85px 1fr;
