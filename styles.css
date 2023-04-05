@@ -196,7 +196,7 @@ nav {
     background-color: #7477bf;
     padding: 1rem;
     width: 4rem;
-    border-radius: 50%;
+    border-radius: 47%;
     fill: white;
     margin-left: 2rem;
 }
@@ -273,7 +273,7 @@ nav {
     .settings-button {
         padding-top: 1rem;
     }
-    #toggle {
+    #toggle1, #toggle2 {
         -webkit-appearance: none;
         position: relative;
         width: 100px;
@@ -285,7 +285,7 @@ nav {
         cursor: pointer;
         border: 1px solid lightgray;
     }
-    #toggle::after {
+    #toggle1::after, #toggle2::after {
         content: '';
         position: absolute;
         top: 50%;
@@ -297,10 +297,10 @@ nav {
         background-color: white;
         transition: left .3s;
     }
-    #toggle:checked {
+    #toggle1:checked, #toggle2:checked {
         background-color: #7477bf;
     }
-    #toggle:checked::after {
+    #toggle1:checked::after, #toggle2:checked::after {
         left: 80%;
     }
     p {
@@ -368,6 +368,10 @@ nav {
         margin-bottom: 1rem;
     }
 @media (min-width: 768px) {
+
+    .traffic-nav {
+        justify-content: flex-end;
+    }
     .grid-container {
       grid-template-columns: 85px 1fr;
       grid-template-areas:
@@ -458,8 +462,8 @@ nav {
             padding-right: 1rem;
         }
         .graph-title {
-            margin-top: 1rem;
-            margin-bottom: 2rem;
+            margin-top: 2rem;
+            margin-bottom: .75rem;
         }
         .mobile-users {
             border-top: 1px solid lightgray;
