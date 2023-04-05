@@ -4,6 +4,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
+.widget-container-full, .widget-container-half {
+    position: relative;
+    margin: auto;
+    height: 15rem;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -369,11 +376,26 @@ nav {
     }
 @media (min-width: 768px) {
 
+    #mobile-chart {
+        margin-left: 1rem;
+    }
+
+    .widget-container-full{
+        position: relative;
+        height: 25rem;
+        width: 100%;
+    }
+
+    .widget-container-half{
+        position: relative;
+        height: 18rem;
+    }
+
     .traffic-nav {
         justify-content: flex-end;
     }
     .grid-container {
-      grid-template-columns: 85px 1fr;
+      grid-template-columns: 5.3rem 1fr;
       grid-template-areas:
         "header header"
         "navigation main";
@@ -449,6 +471,11 @@ nav {
         margin-left: 1rem;
     }
     @media (min-width: 1024px) {
+        .widget-container-full{
+        position: relative;
+        height: 30rem;
+        width: 100%;
+    }
         .email {
             font-size: 14px;
         }
