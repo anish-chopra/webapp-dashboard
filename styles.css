@@ -11,6 +11,7 @@
     height: 15rem;
 }
 
+
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -136,6 +137,7 @@ nav {
     color: white;
     font-size: 1.25rem;
     display: flex;
+    margin-bottom: 1rem;
 }
 .bold-alert {
     font-weight: bold;
@@ -203,7 +205,7 @@ nav {
     background-color: #7477bf;
     padding: 1rem;
     width: 4rem;
-    border-radius: 47%;
+    border-radius: 50%;
     fill: white;
     margin-left: 2rem;
 }
@@ -380,16 +382,6 @@ nav {
         margin-left: 1rem;
     }
 
-    .widget-container-full{
-        position: relative;
-        height: 25rem;
-        width: 100%;
-    }
-
-    .widget-container-half{
-        position: relative;
-        height: 18rem;
-    }
 
     .traffic-nav {
         justify-content: flex-end;
@@ -423,8 +415,11 @@ nav {
     .social-number {
         font-size: 2rem;
     }
+    .social-company {
+        font-size: 1rem;
+    }
     .profile-image {
-        padding-right: 1rem;
+        margin-right: 1rem;
     }
     .member-div {
         display: flex;
